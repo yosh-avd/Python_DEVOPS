@@ -8,10 +8,10 @@ from flask import Flask
 app = Flask(__name__)
 
 # Define a route that handles GET requests
-@app.route('/createJira', methods=['POST'])
-def createJira():
+@app.route('/createJIRA', methods=['POST'])
+def createJIRA():
 
-    url = "https://veeramallaabhishek.atlassian.net/rest/api/3/issue"
+    url = "https://yoshobanta-153.atlassian.net/rest/api/3/issue"
 
     API_TOKEN=""
 
@@ -40,10 +40,10 @@ def createJira():
              "version": 1
         },
         "project": {
-           "key": "AB"
+           "key": "MAH"
         },
         "issuetype": {
-            "id": "10006"
+            "id": "10007"
         },
         "summary": "Main order flow broken",
     },

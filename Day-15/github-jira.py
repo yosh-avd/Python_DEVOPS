@@ -29,7 +29,7 @@ def createJira():
                 {
                     "content": [
                         {
-                            "text": "Order entry fails when selecting supplier.",
+                            "text": "Order entry fails when selecting supplier",
                             "type": "text"
                         }
                     ],

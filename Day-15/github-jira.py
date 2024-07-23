@@ -11,7 +11,7 @@ def createjira():
 
     url = "https://yoshobanta-153.atlassian.net/rest/api/3/issue"
 
-    API_TOKEN="ATATT3xFfGF0IGqeLg3v9NyYi6oSV_PcPbiGSwtDBk_WW1Wi5gd82fYQE4z2W-TlDMfoGz95nAZyrWSOC_UpVMN_N5INZsZbY3JJf4P64yU8xYfSzGlBDUZCHAV3sK8oILX54olNTkv4ZOUHsI6XBPS-EBhERsUWdQjmwWF9_dOMGTziN3i0xa8=465D9C74"
+    API_TOKEN="ATATT3xFfGF08f0R4YKjhaZCfs3D1m4SDALoIXxz4AoeSb88n1dgnaIDe3xYXeEzLIg5cS9wWHtpBuw6YrkPcyq02SqW5A8X65-EV0UbxxGrx7BvQ3Mey3GIBfiTrNfSD_Woyz0fYCBGlGY_MFfN_aWe03tkHCVs12du7gTXoSxiPxcmBomGzbo=E91EA8AB"
 
     auth = HTTPBasicAuth("garnaikyosh@gmail.com", API_TOKEN)
 

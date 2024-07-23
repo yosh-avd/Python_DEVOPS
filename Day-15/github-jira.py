@@ -59,5 +59,5 @@ def createjira():
 
     return json.dumps(json.loads(response.text), sort_keys=True, indent=4, separators=(",", ": "))
 
-if __name__ == '__main__':
+if __name__ == '__master__':
     app.run(host='0.0.0.0', port=5000)

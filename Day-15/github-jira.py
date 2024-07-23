@@ -38,10 +38,10 @@ def createjira():
              "version": 1
         },
         "project": {
-           "key": "KAN"
+           "key": "MAH"
         },
         "issuetype": {
-            "id": "10001"
+            "id": "10007"
         },
         "summary": "Main order flow broken",
     },

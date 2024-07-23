@@ -11,9 +11,9 @@ def createjira():
 
     url = "https://yoshobanta-153.atlassian.net/rest/api/3/issue"
 
-    API_TOKEN="ATATT3xFfGF08f0R4YKjhaZCfs3D1m4SDALoIXxz4AoeSb88n1dgnaIDe3xYXeEzLIg5cS9wWHtpBuw6YrkPcyq02SqW5A8X65-EV0UbxxGrx7BvQ3Mey3GIBfiTrNfSD_Woyz0fYCBGlGY_MFfN_aWe03tkHCVs12du7gTXoSxiPxcmBomGzbo=E91EA8AB"
+    API_TOKEN=""
 
-    auth = HTTPBasicAuth("garnaikyosh@gmail.com", API_TOKEN)
+    auth = HTTPBasicAuth("", API_TOKEN)
 
     headers = {
         "Accept": "application/json",

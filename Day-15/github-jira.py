@@ -47,9 +47,9 @@ def createjira():
     "update": {}
     } )
 
-    webhook = request.get_json()
+     webhook = request.get_json()
 
-    required_output = webhook['comment']['body']
+    required_output = webhook['comment'].get['body']
 
     if (required_output  == '/jira'):
                 response = requests.request(

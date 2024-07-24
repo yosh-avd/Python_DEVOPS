@@ -10,8 +10,8 @@ app = Flask(__name__)
 def createjira():
 
     url = "https://yoshobanta-153.atlassian.net/rest/api/3/issue"
-
-    API_TOKEN="ATATT3xFfGF0g9QOL0hKjsnLaHO6zWyes1CoDABLruazBzQrvh-td359aVbm6DcMrGJGio4MOxZX1_H-Sr-VRqTZVtkHssjLmmDtco5xSbTNReGse71x3yQM0KhGjS8K3sWLA2p4cXCZJ7SZb3gSihrfEujv-lDspnsf4nSBsrCySE1gagC3vZs=8C8F732D"
+    
+    API_TOKEN= "ATATT3xFfGF0Hj-pHsmB39jxammRd4VoFkC8w63VzjQDkhSF_QRBKcjQ95Zi2BDchmxBYd4BoJfxBZ6jdK2Mo0geBWYD9M8Y697KNMIqKtGZ0NvBGTENWEvdgtoM8GeSHKpEd9AOlWrGosr6UlEeRDxz79BB57En_P-PQl_mV01JNnsd4Ybt5-g=E7CBAE80"
     auth = HTTPBasicAuth("garnaikyosh@gmail.com", API_TOKEN)
 
     headers = {
@@ -47,23 +47,15 @@ def createjira():
     "update": {}
     } )
 
-     webhook = request.get_json()
+    response = requests.request(
+        "POST",
+        url,
+        data=payload,
+        headers=headers,
+        auth=auth
+    )
 
-    required_output = webhook['comment'].get['body']
+    return json.dumps(json.loads(response.text), sort_keys=True, indent=4, separators=(",", ": "))
 
-    if (required_output  == '/jira'):
-                response = requests.request(
-                "POST",
-                url,
-                data=payload,
-                headers=headers,
-                auth=auth
-                )
-
-                return json.dumps(json.loads(response.text), sort_keys=True, indent=4, separators=(",", ": "))
-
-    else:
-                print("Jira issue will be created if comment include /jira")
-        
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=6000)
+    app.run(host='0.0.0.0', port=5000)

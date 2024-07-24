@@ -1,7 +1,7 @@
 import requests
 from requests.auth import HTTPBasicAuth
 import json
-from flask import Flask,request
+from flask import Flask
 
 app = Flask(__name__)
 
